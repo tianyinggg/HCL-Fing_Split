@@ -1,0 +1,39 @@
+# Build outputs
+build/
+*.o
+*.so
+*.so.*
+*.a
+*.out
+sptrsv_double
+*_baseline
+silu_test
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Large/generated experiment data
+data/raw_mtx/*
+data/csrbin/*
+data/rhs/*
+data/meta/*
+!data/README.md
+!data/sanity/
+!data/sanity/**
+
+# Logs and generated result vectors
+logs/*
+results/sanity/*
+Split_SpTRSV/policy/*
+
+# Temporary archives
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Local editor/system files
+.DS_Store
+*.swp
+*.swo

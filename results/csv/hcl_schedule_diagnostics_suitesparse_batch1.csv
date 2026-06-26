@@ -1,0 +1,17 @@
+# 文件说明: SuiteSparse batch1 的 HCL-Fing 调度诊断统计，用于分析 analysis_order_error。
+# CSV格式: 注释行以#开头；随后第一行是字段名；第二行是中文字段说明；第三行开始是数据
+# 维护命令: python3 scripts/annotate_results_csv.py
+matrix,n,nnz,num_levels,avg_parallelism,max_level_width,min_level_width,avg_row_nnz,max_row_nnz,same_warp_dependencies,non_prior_warp_dependencies,status
+矩阵名,矩阵维度,lower CSR非零元数,层级数量,平均层级并行度,最大层宽,最小层宽,平均每行非零元数量,最大行非零元数量,同一warp内依赖数量,非前序warp依赖数量,运行状态或错误类型
+1138_bus,1138,2596,21,54.1905,297,1,2.2812,11,0,0,ok
+bcsstk08,1074,7017,78,13.7692,39,1,6.53352,166,9,130,analysis_order_error
+bcsstk11,1473,17857,195,7.55385,15,1,12.1229,27,25,204,analysis_order_error
+bcsstk23,3134,24156,125,25.072,42,1,7.70772,21,24,149,analysis_order_error
+msc01050,1050,15103,60,17.5,58,1,14.3838,126,2,170,analysis_order_error
+msc01440,1440,23855,61,23.6066,147,1,16.566,40,0,135,analysis_order_error
+ex10,2410,28625,364,6.62088,19,1,11.8776,26,12,64,analysis_order_error
+ex29,2870,13312,175,16.4,180,1,4.63833,5,0,10,analysis_order_error
+pde2961,2961,8773,109,27.1651,47,1,2.96285,3,0,0,ok
+rdb2048,2048,7040,64,32,63,1,3.4375,4,0,0,ok
+cavity05,1182,16763,141,8.38298,22,1,14.1819,20,13,167,analysis_order_error
+raefsky6,3402,69168,99,34.3636,222,1,20.3316,81,9,998,analysis_order_error

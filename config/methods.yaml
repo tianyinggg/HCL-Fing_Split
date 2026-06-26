@@ -1,0 +1,5 @@
+methods:
+  - split_sptrsv
+  - hcl_fing
+  - cusparse_spsv
+  - mkl_sptrsv

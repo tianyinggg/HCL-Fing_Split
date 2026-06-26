@@ -1,0 +1,9 @@
+# 文件说明: HCL smoke lower4 小矩阵 benchmark 检查结果。
+# CSV格式: 注释行以#开头；随后第一行是字段名；第二行是中文字段说明；第三行开始是数据
+# 维护命令: python3 scripts/annotate_results_csv.py
+mode,method,matrix,n,nnz,diag_filled,warmup,repeat_solve,repeat_analysis,statistic,analysis_ms,solve_ms,total_1_ms,total_10_ms,total_100_ms,split_internal_sum_ms,split_sptrsv1_ms,split_spmv_ms,split_sptrsv2_ms,split_transfer_ms,residual,residual_pass,status,error,timeout
+运行模式,方法名,矩阵名,矩阵维度,lower CSR非零元数,补对角数量,预热次数,求解计时重复次数,分析/准备计时重复次数,统计方式,分析准备中位时间ms,单次完整求解端到端中位时间ms,一次求解总时间ms,十次求解总时间ms,百次求解总时间ms,Split内部计时求和ms,Split第一段三角求解ms,Split中间SpMV时间ms,Split第二段三角求解ms,Split内部传输求和ms,相对残差 ||Ax-b||/||b||,残差是否通过阈值检查,运行状态或错误类型,失败原因或诊断信息,是否超时
+benchmark,cusparse_spsv,hcl_smoke_lower4,4,10,0,5,50,10,median,0.78131198883056641,0.0092319999821484089,0.79054398881271482,0.8736319886520505,1.7045119870454073,,,,,,0,true,ok,,false
+benchmark,mkl,hcl_smoke_lower4,4,10,0,5,50,10,median,0.0027619999999997091,0.00010300000000018628,0.0028649999999998954,0.0037920000000015719,0.013062000000018337,,,,,,0,true,ok,,false
+benchmark,hcl_fing,hcl_smoke_lower4,4,10,0,5,50,10,median,0.25907200574874878,0.0071680000983178616,0.26624000584706664,0.33075200673192739,0.97587201558053493,,,,,,0,true,ok,,false
+benchmark,split_sptrsv,hcl_smoke_lower4,4,10,0,5,50,10,median,0.46414400161302183,0.04292000000000229,0.50706400161302412,0.89334400161304472,4.7561440016132508,0.0059839999303221703,0.0059839999303221703,0.001247999956831336,0.0012799999676644802,0.0085279999766498804,0,true,ok,,false

@@ -1,0 +1,6 @@
+SpTRSV1 method: 11
+SpMV platform: 8
+SpTRSV2 method: 11
+Split policy: 1
+Split level: 4
+Split row: 14

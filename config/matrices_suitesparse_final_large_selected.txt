@@ -1,0 +1,8 @@
+TAMU_SmartGridCenter/ACTIVSg70K
+Hamm/hcircuit
+GHS_indef/a5esindl
+GHS_indef/aug3dcqp
+GHS_indef/a2nnsnsl
+JGD_Homology/m133-b3
+JGD_Homology/shar_te2-b3
+VLSI/ss1

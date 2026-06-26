@@ -1,0 +1,17 @@
+# 文件说明: 最终大矩阵候选 quick 阶段的四方法鲁棒性状态统计。
+# CSV格式: 注释行以#开头；随后第一行是字段名；第二行是中文字段说明；第三行开始是数据
+# 维护命令: python3 scripts/annotate_results_csv.py
+scope,method,matrix_count,ok_count,ok_rate,analysis_order_error_count,residual_error_count,timeout_count,residual_pass_count,status_counts
+统计范围,方法名,矩阵数量,成功数量,成功比例,HCL调度顺序错误数量,残差错误数量,超时数量,残差通过数量,状态计数字典
+quick_candidates,cusparse_spsv,24,19,0.791667,0,5,0,19,ok:19;residual_error:5
+quick_candidates,mkl,24,19,0.791667,0,5,0,19,ok:19;residual_error:5
+quick_candidates,hcl_fing,24,9,0.375,14,1,0,9,analysis_order_error:14;ok:9;residual_error:1
+quick_candidates,split_sptrsv,24,19,0.791667,0,5,0,19,ok:19;residual_error:5
+final_clean_benchmark,cusparse_spsv,8,8,1,0,0,0,8,ok:8
+final_clean_benchmark,mkl,8,8,1,0,0,0,8,ok:8
+final_clean_benchmark,hcl_fing,8,8,1,0,0,0,8,ok:8
+final_clean_benchmark,split_sptrsv,8,8,1,0,0,0,8,ok:8
+benchmark_before_clean,cusparse_spsv,9,9,1,0,0,0,9,ok:9
+benchmark_before_clean,mkl,9,9,1,0,0,0,9,ok:9
+benchmark_before_clean,hcl_fing,9,8,0.888889,1,0,0,8,analysis_order_error:1;ok:8
+benchmark_before_clean,split_sptrsv,9,9,1,0,0,0,9,ok:9

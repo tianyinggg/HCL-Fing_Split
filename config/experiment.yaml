@@ -1,0 +1,10 @@
+quick_warmup: 1
+quick_repeat_solve: 3
+quick_repeat_analysis: 3
+warmup: 5
+repeat_solve: 50
+repeat_analysis: 10
+statistic: median
+precision: double
+cuda_arch: sm_89
+timeout_sec: 600

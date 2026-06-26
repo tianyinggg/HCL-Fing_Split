@@ -1,0 +1,12 @@
+PowerSystem/power197k
+TAMU_SmartGridCenter/ACTIVSg70K
+IPSO/HTC_336_9129
+Bomhof/circuit_4
+AMD/G2_circuit
+Hamm/hcircuit
+Shyy/shyy161
+Norris/lung2
+MaxPlanck/shallow_water1
+Rommes/juba40k
+Pothen/tandem_dual
+GHS_indef/a5esindl

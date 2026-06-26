@@ -1,0 +1,2 @@
+# One matrix name or Matrix Market path per line.
+# Start with 10-20 representative matrices before running a full suite.
