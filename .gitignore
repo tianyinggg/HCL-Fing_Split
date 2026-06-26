@@ -18,6 +18,10 @@ data/raw_mtx/*
 data/csrbin/*
 data/rhs/*
 data/meta/*
+!data/raw_mtx/README.md
+!data/csrbin/README.md
+!data/rhs/README.md
+!data/meta/README.md
 !data/README.md
 !data/sanity/
 !data/sanity/**
@@ -25,7 +29,10 @@ data/meta/*
 # Logs and generated result vectors
 logs/*
 results/sanity/*
+!results/sanity/README.md
 Split_SpTRSV/policy/*
+!Split_SpTRSV/build/README.md
+!Split_SpTRSV/extras/libufget-1.0.3/build/README.md
 
 # Temporary archives
 *.tar
